@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "AvenirNext Normal";
+  src: url("../../assets/font/AvenirNextLTPro-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "AvenirNext Bold";
+  src: url("../../assets/font/AvenirNextLTPro-Bold.woff2") format("woff2");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "AvenirNext Demi";
+  src: url("../../assets/font/AvenirNextLTPro-Demi.woff2") format("woff2");
+  font-weight: 600;
+}
+body {
+  font-family: "AvenirNext Normal";
+}
+
+h1 {
+  font-family: "AvenirNext Normal";
+}/*# sourceMappingURL=bio.css.map */
