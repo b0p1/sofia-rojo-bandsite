@@ -26,29 +26,57 @@ body {
 }
 
 header {
-  background: url(../assets/logo/Logo-bandsite.svg) no-repeat center #323232;
+  background-color: #323232;
   width: 100%;
   height: 7rem;
   display: flex;
-  justify-content: space-evenly;
-  align-items: flex-end;
+  flex-direction: column;
+}
+
+.header__logo {
+  display: flex;
+  align-self: center;
+  height: 20px;
+  padding: 1rem;
 }
 
 a {
   text-decoration: none;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .header__nav {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: flex-end;
 }
 .header__nav__link {
   padding: 1rem;
-  margin: 1rem 1rem 0 1rem;
+  margin: 0 1rem 0 1rem;
+}
+
+.hero {
+  background: url(../assets/images/hero-bio.jpg) no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 20rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  margin: 0 1rem;
+  color: #ffffff;
+  font-family: "AvenirNext Demi";
 }
 
 .main__img {
-  width: calc;
+  width: 90%;
+  margin: 1rem;
+}
+
+.photo-gallery__img {
+  width: 90%;
+  margin: 1rem;
 }/*# sourceMappingURL=bio.css.map */
