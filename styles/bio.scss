@@ -38,15 +38,15 @@ a {
   &__link {
     display: flex;
     justify-content: center;
-    padding-bottom: 1rem ;
+    padding-bottom: 1rem;
     width: 50%;
 
     &--active {
       font-family: $Ave-demi;
-      border-bottom: .25rem solid $White;
+      border-bottom: 0.25rem solid $White;
     }
 
-    &--inactive{
+    &--inactive {
       color: $Mercury;
     }
   }
@@ -68,25 +68,45 @@ h1 {
   font-family: $Ave-demi;
 }
 
-.main{
+.main {
   margin: 1rem;
   display: flex;
   flex-direction: column;
-  &__title{
+  &__title {
     font-family: $Ave-demi;
     margin: 1rem 0;
   }
-  &__quote{
+  &__quote {
     font-family: $Ave-demi;
-    font-size:0.875rem;
+    font-size: 0.875rem;
     line-height: 1.375rem;
-    margin-bottom:0 ;
+    margin-bottom: 0;
+  }
+  &__subheader {
+    font-size: 0.875rem;
+    margin-bottom: 0;
+    margin-top: 1.5rem;
+  }
+  &__par {
+    font-size: 0.813rem;
+    line-height: 1.125rem;
+    text-align: start;
+    margin-bottom: 0;
   }
 }
 
+.photo-gallery {
+  padding: 0 1rem;
+  background: $Alabaster;
+  font-family: $Ave-demi;
 
-
-.photo-gallery__img {
-  width: 100%;
-  
+  &__title {
+    padding-top: 1rem;
+    margin: 0;
+  }
+  &__img {
+    width: 100%;
+    background: $Alabaster;
+    margin-top: 1rem;
+  }
 }
