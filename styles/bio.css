@@ -28,7 +28,6 @@ body {
 header {
   background-color: #323232;
   width: 100%;
-  height: 7rem;
   display: flex;
   flex-direction: column;
 }
@@ -47,19 +46,28 @@ a {
 
 .header__nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-end;
 }
 .header__nav__link {
-  padding: 1rem;
-  margin: 0 1rem 0 1rem;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+  width: 50%;
+}
+.header__nav__link--active {
+  font-family: "AvenirNext Demi";
+  border-bottom: 0.25rem solid #ffffff;
+}
+.header__nav__link--inactive {
+  color: #e1e1e1;
 }
 
 .hero {
   background: url(../assets/images/hero-bio.jpg) no-repeat;
   background-size: 100%;
   width: 100%;
-  height: 20rem;
+  height: 11rem;
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -71,12 +79,22 @@ h1 {
   font-family: "AvenirNext Demi";
 }
 
-.main__img {
-  width: 90%;
+.main {
   margin: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.main__title {
+  font-family: "AvenirNext Demi";
+  margin: 1rem 0;
+}
+.main__quote {
+  font-family: "AvenirNext Demi";
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  margin-bottom: 0;
 }
 
 .photo-gallery__img {
-  width: 90%;
-  margin: 1rem;
+  width: 100%;
 }/*# sourceMappingURL=bio.css.map */

@@ -15,7 +15,6 @@ header {
   // background: url(../assets/logo/Logo-bandsite.svg) no-repeat center
   //   $BandSite_Black;
   width: 100%;
-  height: 7rem;
   display: flex;
   flex-direction: column;
 }
@@ -33,12 +32,23 @@ a {
 
 .header__nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-end;
 
   &__link {
-    padding: 1rem;
-    margin: 0 1rem 0 1rem;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem ;
+    width: 50%;
+
+    &--active {
+      font-family: $Ave-demi;
+      border-bottom: .25rem solid $White;
+    }
+
+    &--inactive{
+      color: $Mercury;
+    }
   }
 }
 
@@ -46,7 +56,7 @@ a {
   background: url(../assets/images/hero-bio.jpg) no-repeat;
   background-size: 100%;
   width: 100%;
-  height: 20rem;
+  height: 11rem;
   color: $White;
   display: flex;
   align-items: center;
@@ -55,15 +65,28 @@ a {
 h1 {
   margin: 0 1rem;
   color: $White;
-  font-family: "AvenirNext Demi";
+  font-family: $Ave-demi;
 }
 
-.main__img {
-  width: 90%;
+.main{
   margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  &__title{
+    font-family: $Ave-demi;
+    margin: 1rem 0;
+  }
+  &__quote{
+    font-family: $Ave-demi;
+    font-size:0.875rem;
+    line-height: 1.375rem;
+    margin-bottom:0 ;
+  }
 }
+
+
 
 .photo-gallery__img {
-  width: 90%;
-  margin: 1rem;
+  width: 100%;
+  
 }
