@@ -118,5 +118,29 @@ h1 {
 .photo-gallery__img {
   width: 100%;
   background: #fafafa;
-  margin-top: 1rem;
+  margin-top: 0.8rem;
+}
+
+.footer {
+  background: #323232;
+  color: #ffffff;
+  padding: 0 1rem;
+}
+.footer__title {
+  margin-top: 0.75rem;
+  padding: 1rem 0;
+  margin-bottom: 0;
+  font-family: "AvenirNext Demi";
+}
+.footer__socials {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+.footer__par {
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+}
+.footer__par-title {
+  font-family: "AvenirNext Demi";
 }/*# sourceMappingURL=bio.css.map */

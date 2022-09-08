@@ -107,6 +107,30 @@ h1 {
   &__img {
     width: 100%;
     background: $Alabaster;
-    margin-top: 1rem;
+    margin-top: .80rem;
+  }
+}
+
+.footer{
+  background: $BandSite_Black;
+  color: $White;
+  padding: 0 1rem;
+  &__title{
+    margin-top: .75rem;
+    padding: 1rem 0;
+    margin-bottom: 0;
+    font-family: $Ave-demi;
+  }
+  &__socials{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+  }
+  &__par{
+    font-size:0.813rem ;
+    line-height:1.125rem ;
+    &-title{
+      font-family: $Ave-demi;
+    }
   }
 }
