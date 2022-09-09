@@ -107,30 +107,47 @@ h1 {
   &__img {
     width: 100%;
     background: $Alabaster;
-    margin-top: .80rem;
+    margin-top: 0.8rem;
   }
 }
 
-.footer{
+.footer {
   background: $BandSite_Black;
   color: $White;
   padding: 0 1rem;
-  &__title{
-    margin-top: .75rem;
+  &__title {
+    margin-top: 0.75rem;
     padding: 1rem 0;
     margin-bottom: 0;
     font-family: $Ave-demi;
   }
-  &__socials{
+  &__socials {
     display: flex;
     justify-content: space-between;
     width: 40%;
+    margin-bottom: 1.5rem;
   }
-  &__par{
-    font-size:0.813rem ;
-    line-height:1.125rem ;
-    &-title{
+  &__par {
+    font-size: 0.813rem;
+    line-height: 1.125rem;
+    &-title {
       font-family: $Ave-demi;
+      line-height: 1.125rem;
     }
+    &-desc {
+      line-height: 1.125rem;
+    }
+    &-email {
+      margin: 1rem 0;
+    }
+    &-copyright {
+      margin: 0;
+      padding-bottom: 1rem;
+      font-size: 0.625rem;
+    }
+  }
+  &__logo {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
   }
 }

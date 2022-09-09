@@ -136,6 +136,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   width: 40%;
+  margin-bottom: 1.5rem;
 }
 .footer__par {
   font-size: 0.813rem;
@@ -143,4 +144,20 @@ h1 {
 }
 .footer__par-title {
   font-family: "AvenirNext Demi";
+  line-height: 1.125rem;
+}
+.footer__par-desc {
+  line-height: 1.125rem;
+}
+.footer__par-email {
+  margin: 1rem 0;
+}
+.footer__par-copyright {
+  margin: 0;
+  padding-bottom: 1rem;
+  font-size: 0.625rem;
+}
+.footer__logo {
+  margin-top: 4rem;
+  margin-bottom: 1rem;
 }/*# sourceMappingURL=bio.css.map */
