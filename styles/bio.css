@@ -218,14 +218,38 @@ h1 {
   background: #fafafa;
   font-family: "AvenirNext Demi";
 }
+@media screen and (min-width: 768px) {
+  .photo-gallery {
+    padding: 0 2.25rem;
+  }
+}
 .photo-gallery__title {
   padding-top: 1rem;
   margin: 0;
+}
+@media screen and (min-width: 768px) {
+  .photo-gallery__title {
+    font-size: 2.25rem;
+    padding-top: 2.25rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .photo-gallery__img-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 .photo-gallery__img {
   width: 100%;
   background: #fafafa;
   margin-top: 0.8rem;
+}
+@media screen and (min-width: 768px) {
+  .photo-gallery__img {
+    width: 12.75rem;
+    padding: 0.75rem 0 0.75rem 0;
+  }
 }
 
 .footer {

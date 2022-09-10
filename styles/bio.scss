@@ -180,15 +180,32 @@ h1 {
   padding: 0 1rem;
   background: $Alabaster;
   font-family: $Ave-demi;
-
+  @include tablet{
+    padding: 0 2.25rem;
+  }
   &__title {
     padding-top: 1rem;
     margin: 0;
+    @include tablet{
+      font-size: 2.25rem;
+      padding-top: 2.25rem  ;
+    }
+  }
+  &__img-gallery{
+    @include tablet{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
   }
   &__img {
     width: 100%;
     background: $Alabaster;
     margin-top: 0.8rem;
+    @include tablet{
+      width: 12.75rem;
+      padding: .75rem 0 .75rem 0;
+    }
   }
 }
 
