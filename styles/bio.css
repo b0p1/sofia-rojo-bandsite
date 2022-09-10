@@ -141,20 +141,24 @@ h1 {
   .main__title {
     font-size: 2.25rem;
     font-weight: 700;
+    padding: 0;
+    margin-top: 0;
   }
 }
 @media screen and (min-width: 768px) {
   .main__img {
-    width: 35rem;
     height: 18rem;
+    width: 33rem;
     -o-object-fit: cover;
        object-fit: cover;
-    align-self: center;
+    -o-object-position: 100% 60%;
+       object-position: 100% 60%;
+    padding: 0 4rem;
   }
 }
 @media screen and (min-width: 768px) {
   .main__about {
-    padding: 0 5.5rem;
+    padding: 0 4rem;
   }
 }
 .main__quote {
@@ -163,16 +167,50 @@ h1 {
   line-height: 1.375rem;
   margin-bottom: 0;
 }
+@media screen and (min-width: 768px) {
+  .main__quote {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 600;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main__quote-credit {
+    font-size: 0.95rem;
+  }
+}
 .main__subheader {
   font-size: 0.875rem;
   margin-bottom: 0;
   margin-top: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .main__subheader {
+    font-size: 1.5rem;
+    font-family: "AvenirNext Demi";
+  }
+}
+@media screen and (min-width: 768px) {
+  .main__text {
+    display: flex;
+    flex-direction: row;
+    padding: 0 4rem;
+  }
 }
 .main__par {
   font-size: 0.813rem;
   line-height: 1.125rem;
   text-align: start;
   margin-bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  .main__par {
+    padding: 0;
+    margin-right: 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    margin-top: 1.5rem;
+  }
 }
 
 .photo-gallery {
