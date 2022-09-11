@@ -257,17 +257,59 @@ h1 {
   color: #ffffff;
   padding: 0 1rem;
 }
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 2.25rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__nav {
+    display: flex;
+    align-items: center;
+  }
+}
 .footer__title {
   margin-top: 0.75rem;
   padding: 1rem 0;
   margin-bottom: 0;
   font-family: "AvenirNext Demi";
 }
+@media screen and (min-width: 768px) {
+  .footer__title {
+    font-size: 2.25rem;
+    margin: 0;
+    width: 50%;
+  }
+}
 .footer__socials {
   display: flex;
   justify-content: space-between;
   width: 40%;
   margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__socials {
+    margin: 0;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__socials-icon {
+    height: 1.5rem;
+    padding: 1.25rem 0.75em;
+  }
+}
+.footer__socials-logo {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .footer__socials-logo {
+    display: flex;
+    height: 1.25rem;
+    padding: 1rem 0;
+    padding-left: 6rem;
+    justify-self: flex-end;
+  }
 }
 .footer__par {
   font-size: 0.813rem;
@@ -291,4 +333,16 @@ h1 {
 .footer__logo {
   margin-top: 4rem;
   margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__logo {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  a.footer-socials {
+    height: 1.75rem;
+    width: 1.75rem;
+  }
 }/*# sourceMappingURL=bio.css.map */
