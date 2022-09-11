@@ -259,6 +259,10 @@ h1 {
   @include tablet{
     padding: 2.25rem;
   }
+  @include desktop{
+    margin: auto;
+    padding: 2rem 8rem;
+  }
   &__nav{
     @include tablet{
       display: flex;
@@ -276,6 +280,9 @@ h1 {
       margin:0 ;
       width: 50%;
     }
+    @include desktop{
+      width:23rem ;
+    }
   }
   &__socials {
     display: flex;
@@ -286,11 +293,17 @@ h1 {
       margin: 0;
       width: 100%;
     }
+    @include desktop{
+      justify-content: flex-start;
+      margin-left: 2rem;
+    }
     &-icon{
       @include tablet{
         height: 1.5rem;
         padding:1.25rem 1.25em;
-
+      }
+      @include desktop{
+        padding: 1rem;
       }
     }
     &-logo{
@@ -302,6 +315,9 @@ h1 {
       padding-left: 6rem;
       justify-self: flex-end;
      } 
+     @include desktop{
+      padding-left: 29.5rem;
+     }
     }
   }
 
@@ -312,7 +328,11 @@ h1 {
       @include tablet{
         display: flex;
         justify-content: space-between;
-        padding: 1rem 0;
+        padding-top: 1rem ;
+        line-height: 1.25rem;
+      }
+      @include desktop{
+        width: 72%;
       }
     }
     &-agent{
@@ -324,9 +344,17 @@ h1 {
     &-title {
       font-family: $Ave-demi;
       line-height: 1.125rem;
+      @include tablet{
+        line-height: 1.25rem;
+        font-weight: 500;
+        font-family: $Ave-demi;
+      }
     }
     &-desc {
       line-height: 1.125rem;
+      @include tablet{
+        line-height: 1.25rem;
+      }
     }
     &-email {
       margin: 1rem 0;
