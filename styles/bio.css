@@ -30,13 +30,18 @@ header {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: baseline;
 }
 @media screen and (min-width: 768px) {
   header {
     flex-direction: row;
     align-items: center;
     padding: 0 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  header {
+    margin: auto;
+    padding: 0 8rem;
   }
 }
 
@@ -109,6 +114,14 @@ a {
     padding: 0 2.25rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .hero {
+    margin: auto;
+    padding: 0 8rem;
+    height: 35rem;
+    background-position: -14rem 35%;
+  }
+}
 
 h1 {
   margin: 0 1rem;
@@ -133,6 +146,11 @@ h1 {
     padding: 2.25rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .main {
+    padding: 0 8rem;
+  }
+}
 .main__title {
   font-family: "AvenirNext Demi";
   padding: 1rem 0;
@@ -143,6 +161,11 @@ h1 {
     font-weight: 700;
     padding: 0;
     margin-top: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main__title {
+    margin: 2rem 0;
   }
 }
 @media screen and (min-width: 768px) {
@@ -156,9 +179,22 @@ h1 {
     padding: 0 4rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .main__img {
+    align-self: center;
+    height: 28rem;
+    width: 52rem;
+    padding: 0 5.5rem;
+  }
+}
 @media screen and (min-width: 768px) {
   .main__about {
     padding: 0 4rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main__about {
+    padding: 0 5.5rem;
   }
 }
 .main__quote {
@@ -172,6 +208,11 @@ h1 {
     font-size: 1.3rem;
     line-height: 2rem;
     font-weight: 600;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main__quote {
+    width: 62%;
   }
 }
 @media screen and (min-width: 768px) {
@@ -197,6 +238,11 @@ h1 {
     padding: 0 4rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .main__text {
+    padding: 0 5.5rem;
+  }
+}
 .main__par {
   font-size: 0.813rem;
   line-height: 1.125rem;
@@ -210,6 +256,11 @@ h1 {
     font-size: 0.875rem;
     line-height: 1.375rem;
     margin-top: 1.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main__par {
+    margin: 1.5rem 0.75rem 2.75rem 0;
   }
 }
 
@@ -296,7 +347,7 @@ h1 {
 @media screen and (min-width: 768px) {
   .footer__socials-icon {
     height: 1.5rem;
-    padding: 1.25rem 0.75em;
+    padding: 1.25rem 1.25em;
   }
 }
 .footer__socials-logo {
@@ -315,6 +366,18 @@ h1 {
   font-size: 0.813rem;
   line-height: 1.125rem;
 }
+@media screen and (min-width: 768px) {
+  .footer__par-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
+}
+.footer__par-agent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .footer__par-title {
   font-family: "AvenirNext Demi";
   line-height: 1.125rem;
@@ -329,6 +392,11 @@ h1 {
   margin: 0;
   padding-bottom: 1rem;
   font-size: 0.625rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__par-copyright {
+    font-size: 0.813rem;
+  }
 }
 .footer__logo {
   margin-top: 4rem;
