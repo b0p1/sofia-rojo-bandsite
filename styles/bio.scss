@@ -3,7 +3,14 @@
 @use "./partials/mixins" as *;
 
 html {
-  box-sizing: border-box;
+  html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
 }
 
 body {
@@ -15,14 +22,16 @@ header {
   width: 100%;
   display: flex;
   flex-direction: column;
-  @include tablet{
-    flex-direction:row;
+  @include tablet {
+    box-sizing: border-box;
+    flex-direction: row;
     align-items: center;
-    padding:0 2.25rem ;
+    padding: 0 0 0 2.25rem;
   }
-  @include desktop{
-    margin: auto;
-    padding: 0 8rem;
+  @include desktop {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 0 0 8rem;
   }
 }
 .header__logo {
@@ -30,8 +39,8 @@ header {
   align-self: center;
   height: 20px;
   padding: 1rem;
-  @include tablet{
-  padding: 0;
+  @include tablet {
+    padding: 0;
   }
 }
 
@@ -44,7 +53,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  @include tablet{
+  @include tablet {
     align-items: center;
   }
   &__link {
@@ -52,8 +61,8 @@ a {
     justify-content: center;
     padding-bottom: 1rem;
     width: 50%;
-    @include tablet{
-      margin:0 3rem; 
+    @include tablet {
+      margin: 0 3rem;
       padding: 2rem 0;
     }
 
@@ -65,31 +74,30 @@ a {
     &--inactive {
       color: $Mercury;
       padding-bottom: 1.25rem;
-      @include tablet{
-        padding-bottom:2.25rem ;
+      @include tablet {
+        padding-bottom: 2.25rem;
       }
     }
   }
 }
 
 .hero {
-  background: url(../assets/images/hero-bio.jpg)no-repeat center;
-  background-size: 100%;
-  width: 100%;
+  background: url(../assets/images/hero-bio.jpg) rgba(50, 50, 50, 50%) no-repeat
+    center center;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: 100% 70%;
   height: 11rem;
   color: $White;
   display: flex;
   align-items: center;
-  @include tablet{
+  @include tablet {
     height: 26rem;
-    background-position: 100% 70%;
-    padding:0 2.25rem ;
+    padding: 0 0 0 2.25rem;
   }
-  @include desktop{
-    margin: auto;
-    padding: 0 8rem;
-    height: 35rem;
-    background-position: -14rem 35%;
+  @include desktop {
+    padding: 0 0 0 8rem;
+    height: 40rem;
   }
 }
 
@@ -97,7 +105,7 @@ h1 {
   margin: 0 1rem;
   color: $White;
   font-family: $Ave-demi;
-  @include tablet{
+  @include tablet {
     font-size: 3.75rem;
     font-weight: 700;
     margin: 0;
@@ -108,64 +116,64 @@ h1 {
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  @include tablet{
+  @include tablet {
     padding: 2.25rem;
   }
-  @include desktop{
+  @include desktop {
     padding: 0 8rem;
   }
   &__title {
     font-family: $Ave-demi;
     padding: 1rem 0;
-    @include tablet{
-    font-size:2.25rem;
-    font-weight: 700;
-    padding: 0;
-    margin-top: 0;
+    @include tablet {
+      font-size: 2.25rem;
+      font-weight: 700;
+      padding: 0;
+      margin-top: 0;
     }
-    @include desktop{
-      margin: 2rem 0;
+    @include desktop {
+      margin: 2.75rem 0;
     }
   }
-  &__img{
-    @include tablet{
+  &__img {
+    @include tablet {
       height: 18rem;
       width: 33rem;
-      object-fit:cover;
+      object-fit: cover;
       object-position: 100% 60%;
-      padding:0 4rem ;
+      padding: 0 4rem;
     }
-    @include desktop{
+    @include desktop {
       align-self: center;
       height: 28rem;
       width: 52rem;
       padding: 0 5.5rem;
     }
   }
-  &__about{
-   @include tablet{
-    padding: 0 4rem;
-   }
-   @include desktop{
-    padding: 0 5.5rem;
-   }
+  &__about {
+    @include tablet {
+      padding: 0 4rem;
+    }
+    @include desktop {
+      padding: 0 5.5rem;
+    }
   }
   &__quote {
     font-family: $Ave-demi;
     font-size: 0.875rem;
     line-height: 1.375rem;
     margin-bottom: 0;
-    @include tablet{
+    @include tablet {
       font-size: 1.3rem;
       line-height: 2rem;
       font-weight: 600;
     }
-    @include desktop{
+    @include desktop {
       width: 62%;
     }
-    &-credit{
-      @include tablet{
-        font-size: .95rem;
+    &-credit {
+      @include tablet {
+        font-size: 0.95rem;
       }
     }
   }
@@ -173,35 +181,35 @@ h1 {
     font-size: 0.875rem;
     margin-bottom: 0;
     margin-top: 1.5rem;
-    @include tablet{
+    @include tablet {
       font-size: 1.5rem;
-      font-family: $Ave-demi
+      font-family: $Ave-demi;
     }
   }
-  &__text{
+  &__text {
     @include tablet {
       display: flex;
       flex-direction: row;
       padding: 0 4rem;
     }
-    @include desktop{
+    @include desktop {
       padding: 0 5.5rem;
-     }
+    }
   }
   &__par {
     font-size: 0.813rem;
     line-height: 1.125rem;
     text-align: start;
     margin-bottom: 0;
-    @include tablet{
+    @include tablet {
       padding: 0;
-      margin-right:.75rem;
+      margin-right: 0.75rem;
       font-size: 0.875rem;
       line-height: 1.375rem;
       margin-top: 1.5rem;
     }
-    @include desktop{
-      margin: 1.5rem .75rem 2.75rem 0;
+    @include desktop {
+      margin: 1.5rem 0.75rem 2.75rem 0;
     }
   }
 }
@@ -210,28 +218,28 @@ h1 {
   padding: 0 1rem;
   background: $Alabaster;
   font-family: $Ave-demi;
-  @include tablet{
+  @include tablet {
     padding: 0 2.25rem;
   }
-  @include desktop{
+  @include desktop {
     margin: auto;
     padding: 0 8rem;
   }
   &__title {
     padding-top: 1rem;
     margin: 0;
-    @include tablet{
+    @include tablet {
       font-size: 2.25rem;
-      padding-top: 2.25rem  ;
+      padding-top: 2.25rem;
     }
   }
-  &__img-gallery{
-    @include tablet{
+  &__img-gallery {
+    @include tablet {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
     }
-    @include desktop{
+    @include desktop {
       padding: 1rem 0;
     }
   }
@@ -239,16 +247,15 @@ h1 {
     width: 100%;
     background: $Alabaster;
     margin-top: 0.8rem;
-    @include tablet{
+    @include tablet {
       width: 12.75rem;
-      padding: .75rem 0 .75rem 0;
+      padding: 0.75rem 0 0.75rem 0;
     }
-    @include desktop{
+    @include desktop {
       width: 20rem;
-      padding: .75rem 0 .75rem 0;
+      padding: 0.75rem 0 0.75rem 0;
       margin-top: 0.4rem;
     }
-    
   }
 }
 
@@ -256,32 +263,31 @@ h1 {
   background: $BandSite_Black;
   color: $White;
   padding: 0 1rem;
-  @include tablet{
+  @include tablet {
     padding: 2.25rem;
   }
-  @include desktop{
+  @include desktop {
     margin: auto;
     padding: 2rem 8rem;
   }
-  &__nav{
-    @include tablet{
+  &__nav {
+    @include tablet {
       display: flex;
       align-items: center;
     }
-
   }
   &__title {
     margin-top: 0.75rem;
     padding: 1rem 0;
     margin-bottom: 0;
     font-family: $Ave-demi;
-    @include tablet{
+    @include tablet {
       font-size: 2.25rem;
-      margin:0 ;
+      margin: 0;
       width: 50%;
     }
-    @include desktop{
-      width:23rem ;
+    @include desktop {
+      width: 23rem;
     }
   }
   &__socials {
@@ -289,62 +295,61 @@ h1 {
     justify-content: space-between;
     width: 40%;
     margin-bottom: 1.5rem;
-    @include tablet{
+    @include tablet {
       margin: 0;
       width: 100%;
     }
-    @include desktop{
+    @include desktop {
       justify-content: flex-start;
       margin-left: 2rem;
     }
-    &-icon{
-      @include tablet{
+    &-icon {
+      @include tablet {
         height: 1.5rem;
-        padding:1.25rem 1.25em;
+        padding: 1.25rem 1.25em;
       }
-      @include desktop{
+      @include desktop {
         padding: 1rem;
       }
     }
-    &-logo{
-     display: none;
-     @include tablet{
-      display:flex;
-      height: 1.25rem;
-      padding:1rem 0;
-      padding-left: 6rem;
-      justify-self: flex-end;
-     } 
-     @include desktop{
-      padding-left: 29.5rem;
-     }
+    &-logo {
+      display: none;
+      @include tablet {
+        display: flex;
+        height: 1.25rem;
+        padding: 1rem 0;
+        padding-left: 6rem;
+        justify-self: flex-end;
+      }
+      @include desktop {
+        padding-left: 29.5rem;
+      }
     }
   }
 
   &__par {
     font-size: 0.813rem;
     line-height: 1.125rem;
-    &-container{
-      @include tablet{
+    &-container {
+      @include tablet {
         display: flex;
         justify-content: space-between;
-        padding-top: 1rem ;
+        padding-top: 1rem;
         line-height: 1.25rem;
       }
-      @include desktop{
+      @include desktop {
         width: 72%;
       }
     }
-    &-agent{
+    &-agent {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      
     }
     &-title {
       font-family: $Ave-demi;
       line-height: 1.125rem;
-      @include tablet{
+      @include tablet {
         line-height: 1.25rem;
         font-weight: 500;
         font-family: $Ave-demi;
@@ -352,7 +357,7 @@ h1 {
     }
     &-desc {
       line-height: 1.125rem;
-      @include tablet{
+      @include tablet {
         line-height: 1.25rem;
       }
     }
@@ -363,7 +368,7 @@ h1 {
       margin: 0;
       padding-bottom: 1rem;
       font-size: 0.625rem;
-      @include tablet{
+      @include tablet {
         font-size: 0.813rem;
       }
     }
@@ -371,14 +376,14 @@ h1 {
   &__logo {
     margin-top: 4rem;
     margin-bottom: 1rem;
-    @include tablet{
+    @include tablet {
       display: none;
     }
   }
 }
 
-a.footer-socials{
-  @include tablet{
+a.footer-socials {
+  @include tablet {
     height: 1.75rem;
     width: 1.75rem;
   }
