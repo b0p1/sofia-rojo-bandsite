@@ -274,6 +274,12 @@ h1 {
     padding: 0 2.25rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .photo-gallery {
+    margin: auto;
+    padding: 0 8rem;
+  }
+}
 .photo-gallery__title {
   padding-top: 1rem;
   margin: 0;
@@ -291,6 +297,11 @@ h1 {
     justify-content: space-between;
   }
 }
+@media screen and (min-width: 1280px) {
+  .photo-gallery__img-gallery {
+    padding: 1rem 0;
+  }
+}
 .photo-gallery__img {
   width: 100%;
   background: #fafafa;
@@ -300,6 +311,13 @@ h1 {
   .photo-gallery__img {
     width: 12.75rem;
     padding: 0.75rem 0 0.75rem 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .photo-gallery__img {
+    width: 20rem;
+    padding: 0.75rem 0 0.75rem 0;
+    margin-top: 0.4rem;
   }
 }
 

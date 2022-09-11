@@ -213,6 +213,10 @@ h1 {
   @include tablet{
     padding: 0 2.25rem;
   }
+  @include desktop{
+    margin: auto;
+    padding: 0 8rem;
+  }
   &__title {
     padding-top: 1rem;
     margin: 0;
@@ -227,6 +231,9 @@ h1 {
       flex-wrap: wrap;
       justify-content: space-between;
     }
+    @include desktop{
+      padding: 1rem 0;
+    }
   }
   &__img {
     width: 100%;
@@ -236,6 +243,12 @@ h1 {
       width: 12.75rem;
       padding: .75rem 0 .75rem 0;
     }
+    @include desktop{
+      width: 20rem;
+      padding: .75rem 0 .75rem 0;
+      margin-top: 0.4rem;
+    }
+    
   }
 }
 
