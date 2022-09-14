@@ -52,37 +52,42 @@ function createShowCard(showData) {
     
     // date section
     let dateLabel = document.createElement('h3');
-    dateLabel.classList.add('show__label')
-    dateLabel.innerText = 'DATE'
+    dateLabel.classList.add('show__label');
+    dateLabel.innerText = 'DATE';
     showCard.appendChild(dateLabel);
 
     let date= document.createElement('p');
-    date.classList.add('date')
-    date.innerText = showData.date
+    date.classList.add('date');
+    date.innerText = showData.date;
     showCard.appendChild(date);
 
     // venue section
     let venueLabel = document.createElement('h3');
-    venueLabel.classList.add('show__label')
-    venueLabel.innerText = 'VENUE'
+    venueLabel.classList.add('show__label');
+    venueLabel.innerText = 'VENUE';
     showCard.appendChild(venueLabel);
 
     let venue= document.createElement('p');
-    venue.classList.add('venue')
-    venue.innerText = showData.venue
+    venue.classList.add('venue');
+    venue.innerText = showData.venue;
     showCard.appendChild(venue);
 
     // location section
     let locationLabel = document.createElement('h3');
-    locationLabel.classList.add('show__label')
-    locationLabel.innerText = 'LOCATION'
+    locationLabel.classList.add('show__label');
+    locationLabel.innerText = 'LOCATION';
     showCard.appendChild(locationLabel);
 
     let location= document.createElement('p');
-    location.classList.add('location')
-    location.innerText = showData.location
+    location.classList.add('location');
+    location.innerText = showData.location;
     showCard.appendChild(location);
 
+    // button section
+    let ticketButton = document.createElement('button');
+    ticketButton.classList.add('ticket-button');
+    ticketButton.innerText = "BUY TICKETS";
+    showCard.appendChild(ticketButton);
 
     return showCard;
 
