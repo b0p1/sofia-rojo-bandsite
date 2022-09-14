@@ -45,14 +45,9 @@ for (let i = 0; i < shows.length; i++) {
 console.log(createShowCard);
 
 function createShowCard(showData) {
-    let mainTitle = document.createElement('h2');
-    mainTitle.classList.add('shows');
-    mainTitle.innerText = 'Shows';
-    showSection.appendChild(mainTitle);
-
-
+    
     let showCard = document.createElement('div');
-    showCard.classList.add('shows__content');
+    showCard.classList.add('shows__card');
     showSection.appendChild(showCard);
     
     // date section
