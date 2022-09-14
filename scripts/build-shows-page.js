@@ -31,7 +31,10 @@ let shows = [
     },
 ];
 
-let showList = document.querySelector('.show-list')
+
+let showSection = document.querySelector('main');
+
+let showList = document.querySelector('.shows-list')
 
 for (let i = 0; i < shows.length; i++) {
     let showData = shows[i];
@@ -39,13 +42,53 @@ for (let i = 0; i < shows.length; i++) {
     showList.appendChild(showCard);
 }
 
-function createShowCard(showData) {
-    let showList = document.createElement('main');
-    showList.classList.add('show-list');
+console.log(createShowCard);
 
-    
+function createShowCard(showData) {
+    let mainTitle = document.createElement('h2');
+    mainTitle.classList.add('shows');
+    mainTitle.innerText = 'Shows';
+    showSection.appendChild(mainTitle);
+
 
     let showCard = document.createElement('div');
-    showCard.classList.add('shoew__content');
+    showCard.classList.add('shows__content');
+    showSection.appendChild(showCard);
     
+    // date section
+    let dateLabel = document.createElement('h3');
+    dateLabel.classList.add('show__label')
+    dateLabel.innerText = 'DATE'
+    showCard.appendChild(dateLabel);
+
+    let date= document.createElement('p');
+    date.classList.add('date')
+    date.innerText = showData.date
+    showCard.appendChild(date);
+
+    // venue section
+    let venueLabel = document.createElement('h3');
+    venueLabel.classList.add('show__label')
+    venueLabel.innerText = 'VENUE'
+    showCard.appendChild(venueLabel);
+
+    let venue= document.createElement('p');
+    venue.classList.add('venue')
+    venue.innerText = showData.venue
+    showCard.appendChild(venue);
+
+    // location section
+    let locationLabel = document.createElement('h3');
+    locationLabel.classList.add('show__label')
+    locationLabel.innerText = 'LOCATION'
+    showCard.appendChild(locationLabel);
+
+    let location= document.createElement('p');
+    location.classList.add('location')
+    location.innerText = showData.location
+    showCard.appendChild(location);
+
+
+    return showCard;
+
 }
