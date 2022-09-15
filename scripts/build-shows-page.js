@@ -47,7 +47,7 @@ console.log(createShowCard);
 function createShowCard(showData) {
     
     let showCard = document.createElement('div');
-    showCard.classList.add('shows__card');
+    showCard.classList.add('show__card');
     showSection.appendChild(showCard);
     
     // date section
@@ -57,7 +57,7 @@ function createShowCard(showData) {
     showCard.appendChild(dateLabel);
 
     let date= document.createElement('p');
-    date.classList.add('date');
+    date.classList.add('show__date');
     date.innerText = showData.date;
     showCard.appendChild(date);
 
@@ -68,7 +68,7 @@ function createShowCard(showData) {
     showCard.appendChild(venueLabel);
 
     let venue= document.createElement('p');
-    venue.classList.add('venue');
+    venue.classList.add('show__venue');
     venue.innerText = showData.venue;
     showCard.appendChild(venue);
 
@@ -79,7 +79,7 @@ function createShowCard(showData) {
     showCard.appendChild(locationLabel);
 
     let location= document.createElement('p');
-    location.classList.add('location');
+    location.classList.add('show__location');
     location.innerText = showData.location;
     showCard.appendChild(location);
 

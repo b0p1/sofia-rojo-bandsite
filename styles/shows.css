@@ -109,18 +109,22 @@ a {
   background: url(../assets/images/hero-shows.jpg) rgba(50, 50, 50, 0.5) no-repeat center center;
   background-blend-mode: multiply;
   background-size: cover;
-  background-position: 100% 70%;
-  height: 11rem;
+  background-position: center;
+  height: 100%;
   color: #ffffff;
   display: flex;
   align-items: flex-start;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 1.5rem 0;
 }
 .hero__subheader {
   margin: 1rem 1rem;
   font-size: 1rem;
+}
+.hero__song-link {
+  margin: 1rem;
 }
 @media screen and (min-width: 768px) {
   .hero {
@@ -165,7 +169,7 @@ h1 {
 }
 .main__title {
   font-family: "AvenirNext Demi";
-  padding: 1rem 0;
+  margin: 1rem 0;
 }
 @media screen and (min-width: 768px) {
   .main__title {
@@ -180,157 +184,47 @@ h1 {
     margin: 2.75rem 0;
   }
 }
-@media screen and (min-width: 768px) {
-  .main__img {
-    height: 18rem;
-    width: 33rem;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: 100% 60%;
-       object-position: 100% 60%;
-    padding: 0 4rem;
-  }
+
+.show__card {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #E1E1E1;
+  width: 100%;
 }
-@media screen and (min-width: 1280px) {
-  .main__img {
-    align-self: center;
-    height: 28rem;
-    width: 52rem;
-    padding: 0 5.5rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .main__about {
-    padding: 0 4rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .main__about {
-    padding: 0 5.5rem;
-  }
-}
-.main__quote {
+.show__label {
   font-family: "AvenirNext Demi";
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-  margin-bottom: 0;
+  font-size: 0.625rem;
+  color: lightgray;
+  margin-bottom: 0.5rem;
 }
-@media screen and (min-width: 768px) {
-  .main__quote {
-    font-size: 1.3rem;
-    line-height: 2rem;
-    font-weight: 600;
-  }
+.show__date {
+  font-family: "AvenirNext Demi";
+  margin: 0;
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
 }
-@media screen and (min-width: 1280px) {
-  .main__quote {
-    width: 62%;
-  }
+.show__venue {
+  font-family: "AvenirNext Normal";
+  margin: 0;
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
 }
-@media screen and (min-width: 768px) {
-  .main__quote-credit {
-    font-size: 0.95rem;
-  }
-}
-.main__subheader {
-  font-size: 0.875rem;
-  margin-bottom: 0;
-  margin-top: 1.5rem;
-}
-@media screen and (min-width: 768px) {
-  .main__subheader {
-    font-size: 1.5rem;
-    font-family: "AvenirNext Demi";
-  }
-}
-@media screen and (min-width: 768px) {
-  .main__text {
-    display: flex;
-    flex-direction: row;
-    padding: 0 4rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .main__text {
-    padding: 0 5.5rem;
-  }
-}
-.main__par {
-  font-size: 0.813rem;
-  line-height: 1.125rem;
-  text-align: start;
-  margin-bottom: 0;
-}
-@media screen and (min-width: 768px) {
-  .main__par {
-    padding: 0;
-    margin-right: 0.75rem;
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-    margin-top: 1.5rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .main__par {
-    margin: 1.5rem 0.75rem 2.75rem 0;
-  }
+.show__location {
+  font-family: "AvenirNext Normal";
+  margin: 0;
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
 }
 
-.photo-gallery {
-  padding: 0 1rem;
-  background: #fafafa;
+.ticket-button {
+  border-radius: 0.25rem;
+  border-color: #323232;
+  background: #323232;
+  color: white;
+  padding: 1rem;
   font-family: "AvenirNext Demi";
-}
-@media screen and (min-width: 768px) {
-  .photo-gallery {
-    padding: 0 2.25rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .photo-gallery {
-    margin: auto;
-    padding: 0 8rem;
-  }
-}
-.photo-gallery__title {
-  padding-top: 1rem;
-  margin: 0;
-}
-@media screen and (min-width: 768px) {
-  .photo-gallery__title {
-    font-size: 2.25rem;
-    padding-top: 2.25rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .photo-gallery__img-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .photo-gallery__img-gallery {
-    padding: 1rem 0;
-  }
-}
-.photo-gallery__img {
-  width: 100%;
-  background: #fafafa;
-  margin-top: 0.8rem;
-}
-@media screen and (min-width: 768px) {
-  .photo-gallery__img {
-    width: 12.75rem;
-    padding: 0.75rem 0 0.75rem 0;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .photo-gallery__img {
-    width: 20rem;
-    padding: 0.75rem 0 0.75rem 0;
-    margin-top: 0.4rem;
-  }
+  justify-self: center;
+  margin: 1rem 0;
 }
 
 .footer {
