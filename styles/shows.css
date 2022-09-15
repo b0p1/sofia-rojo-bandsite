@@ -191,11 +191,36 @@ h1 {
   border-bottom: 1px solid #E1E1E1;
   width: 100%;
 }
+@media screen and (min-width: 768px) {
+  .show__card {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+.show__card:hover {
+  background: #fafafa;
+  padding: 1rem;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .show__card:hover {
+    padding: 1.5rem 1.125rem;
+  }
+}
+.show__card:active {
+  background: #e1e1e1;
+}
 .show__label {
   font-family: "AvenirNext Demi";
   font-size: 0.625rem;
   color: lightgray;
   margin-bottom: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .show__label {
+    justify-self: flex-start;
+  }
 }
 .show__date {
   font-family: "AvenirNext Demi";
@@ -203,11 +228,21 @@ h1 {
   margin-bottom: 1rem;
   font-size: 0.75rem;
 }
+@media screen and (min-width: 768px) {
+  .show__date {
+    width: 6.5rem;
+  }
+}
 .show__venue {
   font-family: "AvenirNext Normal";
   margin: 0;
   margin-bottom: 1rem;
   font-size: 0.75rem;
+}
+@media screen and (min-width: 768px) {
+  .show__venue {
+    width: 5.375rem;
+  }
 }
 .show__location {
   font-family: "AvenirNext Normal";
