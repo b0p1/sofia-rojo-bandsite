@@ -99,7 +99,7 @@ a {
     margin: 1rem 1rem;
     font-size: 1rem;
   }
-  &__song-link{
+  &__song-link {
     margin: 1rem;
   }
   @include tablet {
@@ -125,6 +125,7 @@ h1 {
 
 .main {
   padding: 1rem;
+  margin: 0.5rem 0;
   display: flex;
   flex-direction: column;
   @include tablet {
@@ -149,66 +150,66 @@ h1 {
 }
 
 .show {
-  &__card{
+  &__card {
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid #E1E1E1;
+    border-bottom: 1px solid #e1e1e1;
     width: 100%;
 
-    @include tablet{
+    @include tablet {
       flex-direction: row;
       justify-content: space-between;
-      align-items:baseline;
+      align-items: baseline;
     }
-  &:hover{
-    background: $Alabaster;
-    padding: 1rem;
-    cursor: pointer;
-    @include tablet{
-      padding: 1.5rem 1.125rem;
+    &:hover {
+      background: $Alabaster;
+      padding: 1rem;
+      cursor: pointer;
+      @include tablet {
+        padding: 1.5rem 1.125rem;
       }
     }
-  &:active{
-    background: $Mercury;
+    &:active {
+      background: $Mercury;
+    }
   }
-  }
-  &__label{
+  &__label {
     font-family: $Ave-demi;
     font-size: 0.625rem;
     color: lightgray;
-    margin-bottom: .5rem;
-    @include tablet{
+    margin-bottom: 0.5rem;
+    @include tablet {
       justify-self: flex-start;
     }
   }
-  &__date{
+  &__date {
     font-family: $Ave-demi;
     margin: 0;
     margin-bottom: 1rem;
-    font-size: .75rem;
-    @include tablet{
+    font-size: 0.75rem;
+    @include tablet {
       width: 6.5rem;
     }
   }
-  &__venue{
+  &__venue {
     font-family: $Ave-reg;
     margin: 0;
     margin-bottom: 1rem;
-    font-size: .75rem;
-    @include tablet{
+    font-size: 0.75rem;
+    @include tablet {
       width: 5.375rem;
     }
   }
-  &__location{
+  &__location {
     font-family: $Ave-reg;
     margin: 0;
     margin-bottom: 1rem;
-    font-size: .75rem;
+    font-size: 0.75rem;
   }
 }
 
-.ticket-button{
-  border-radius: .25rem;
+.ticket-button {
+  border-radius: 0.25rem;
   border-color: $BandSite_Black;
   background: $BandSite_Black;
   color: white;
