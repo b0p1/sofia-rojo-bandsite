@@ -326,6 +326,31 @@ h1 {
   }
 }
 
+.comment-section {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.comment-avatar {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left;
+     object-position: left;
+  position: absolute;
+  left: 1rem;
+  top: 6rem;
+}
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2.25rem;
+  padding: 0 1rem;
+}
+
 .footer {
   background: #323232;
   color: #ffffff;
