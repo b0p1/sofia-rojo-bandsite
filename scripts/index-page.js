@@ -34,23 +34,27 @@ function createCommentCard(commentData) {
     commentCard.classList.add("comment__card");
     commentList.appendChild(commentCard);
     
+    let commentTitles = document.createElement('div')
+    commentTitles.classList.add('comment__titles')
+    commentCard.appendChild(commentTitles)
+
     // icon section
-    let avatar = document.createElement('img');
+    let avatar = document.createElement('span');
     avatar.classList.add('comment__avatar');
     avatar.innerText = commentData.avatar;
-    commentCard.appendChild(avatar);
+    commentTitles.appendChild(avatar);
 
     // name section
     let nameLabel = document.createElement('h3');
     nameLabel.classList.add('comment__name-label');
     nameLabel.innerText = commentData.name;
-    commentCard.appendChild(nameLabel);
+    commentTitles.appendChild(nameLabel);
 
     // date section 
     let date = document.createElement('h4');
     date.classList.add('comment__date');
     date.innerText = commentData.date;
-    commentCard.appendChild(date);
+    commentTitles.appendChild(date);
 
     // comment section
     let comment = document.createElement('p');

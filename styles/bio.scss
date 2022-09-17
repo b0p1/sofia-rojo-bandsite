@@ -332,7 +332,65 @@ label{
   margin: .5rem 0;
 }
 
+#submitButton{
+  background-color: $BandSite_Black;
+  color: $White;
+  font-family: $Ave-demi;
+  font-size: 1rem;
+  border: 1px solid $BandSite_Black;
+  border-radius: .25rem;
+  padding: 1rem;
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+}
 
+.static-comments{
+  border-bottom: 1px solid $Mercury ;
+}
+
+.comment{
+  &__card{
+    border-top: 1px solid $Mercury ;
+    display: flex;
+    flex-direction: column;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+    // align-items: flex-start;
+    padding: 1rem 0;
+  }
+  &__titles{
+    display: flex;
+    padding-left: 3rem;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+    height: 1rem;
+  }
+  &__avatar{
+    height: 2.25rem;
+    width: 2.25rem;
+    background-color: $Mercury;
+    border-radius: 50%;
+    position: absolute;
+    left: 0rem;
+    top: 0rem;
+  }
+  &__name-label{
+    font-family: $Ave-demi;
+    font-size: .8rem;
+    
+  }
+  &__date{
+    font-family: $Ave-reg;
+    color: $Silver;
+    font-size: .8rem;
+  }
+  &__content{
+    font-size: 0.813rem;
+    padding-left: 3rem;
+    margin-bottom: 0;
+  }
+}
 
 .footer {
   background: $BandSite_Black;
@@ -352,9 +410,8 @@ label{
     }
   }
   &__title {
-    margin-top: 0.75rem;
+    margin: 0rem;
     padding: 1rem 0;
-    margin-bottom: 0;
     font-family: $Ave-demi;
     @include tablet {
       font-size: 2.25rem;

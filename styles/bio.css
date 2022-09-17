@@ -416,6 +416,60 @@ label {
   margin: 0.5rem 0;
 }
 
+#submitButton {
+  background-color: #323232;
+  color: #ffffff;
+  font-family: "AvenirNext Demi";
+  font-size: 1rem;
+  border: 1px solid #323232;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.static-comments {
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.comment__card {
+  border-top: 1px solid #e1e1e1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+.comment__titles {
+  display: flex;
+  padding-left: 3rem;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  height: 1rem;
+}
+.comment__avatar {
+  height: 2.25rem;
+  width: 2.25rem;
+  background-color: #e1e1e1;
+  border-radius: 50%;
+  position: absolute;
+  left: 0rem;
+  top: 0rem;
+}
+.comment__name-label {
+  font-family: "AvenirNext Demi";
+  font-size: 0.8rem;
+}
+.comment__date {
+  font-family: "AvenirNext Normal";
+  color: #afafaf;
+  font-size: 0.8rem;
+}
+.comment__content {
+  font-size: 0.813rem;
+  padding-left: 3rem;
+  margin-bottom: 0;
+}
+
 .footer {
   background: #323232;
   color: #ffffff;
@@ -439,9 +493,8 @@ label {
   }
 }
 .footer__title {
-  margin-top: 0.75rem;
+  margin: 0rem;
   padding: 1rem 0;
-  margin-bottom: 0;
   font-family: "AvenirNext Demi";
 }
 @media screen and (min-width: 768px) {
