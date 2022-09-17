@@ -216,6 +216,7 @@ h1 {
 
 .photo-gallery {
   padding: 0 1rem;
+  padding-bottom: 1rem;
   background: $Alabaster;
   font-family: $Ave-demi;
   @include tablet {
@@ -230,6 +231,7 @@ h1 {
     margin: 0;
     @include tablet {
       font-size: 2.25rem;
+      font-weight: 700;
       padding-top: 2.25rem;
     }
   }
@@ -259,22 +261,29 @@ h1 {
   }
 }
 
+
+
 .comment {
   &-section {
     padding: 1rem;
     display: flex;
     flex-direction: column;
     position: relative;
+    &__title{
+      font-family: $Ave-demi;
+      margin-bottom: .5rem ;
+      margin-top: 0;
+    }
   }
   &-avatar {
     border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
+    width: 2.25rem;
+    height: 2.25rem;
     object-fit: cover;
     object-position: left;
     position: absolute;
     left: 1rem;
-    top: 6rem;
+    top: 5.75rem;
   }
   &-form {
     display: flex;
@@ -283,6 +292,47 @@ h1 {
     padding: 0 1rem;
   }
 }
+
+input::placeholder{
+    color: $BandSite_DarkBlack;
+  }
+textarea::placeholder{
+  color: $BandSite_DarkBlack;
+}
+textarea{
+  resize: none;
+}
+label{
+  color: $Silver;
+  font-family: $Ave-demi;
+  font-weight: 600;
+  font-size: 0.625rem;
+  margin-top: 1rem;
+}
+
+#nameBox{
+  font-family: $Ave-reg;
+  font-size: .9rem;
+  color: black;
+  background-color: $Alabaster;
+  border: $Mercury solid 1px;
+  border-radius: .25rem;
+  padding: .7rem;
+  margin: .5rem 0;
+}
+
+#commentBox{
+  font-family: $Ave-reg;
+  font-size: .9rem;
+  color: black;
+  background-color: $Alabaster;
+  border: $Mercury solid 1px;
+  border-radius: .25rem;
+  padding: .7rem;
+  margin: .5rem 0;
+}
+
+
 
 .footer {
   background: $BandSite_Black;
