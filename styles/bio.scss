@@ -549,7 +549,7 @@ label{
       display: flex;
       flex-direction: column;
       @include tablet {
-        line-height: 1.25rem;
+        line-height: 1.375rem;
       }
     }
     &-email {

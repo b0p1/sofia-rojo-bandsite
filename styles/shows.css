@@ -123,14 +123,27 @@ a {
   margin: 1rem 1rem;
   font-size: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .hero__subheader {
+    margin: 0;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+  }
+}
 .hero__song-link {
   margin: 1rem;
   border-radius: 0.25rem;
 }
 @media screen and (min-width: 768px) {
+  .hero__song-link {
+    width: 55%;
+  }
+}
+@media screen and (min-width: 768px) {
   .hero {
     height: 26rem;
-    padding: 0 0 0 2.25rem;
+    padding: 2rem 0 2rem 2.25rem;
+    align-items: inherit;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -150,6 +163,7 @@ h1 {
     font-size: 3.75rem;
     font-weight: 700;
     margin: 0;
+    width: 75%;
   }
 }
 
@@ -204,11 +218,6 @@ h1 {
   background: #fafafa;
   cursor: pointer;
 }
-@media screen and (min-width: 768px) {
-  .show__card:hover {
-    padding: 1.5rem 1.125rem;
-  }
-}
 .show__card:active {
   background: #e1e1e1;
 }
@@ -221,6 +230,7 @@ h1 {
 @media screen and (min-width: 768px) {
   .show__label {
     justify-self: flex-start;
+    display: none;
   }
 }
 .show__date {
@@ -261,6 +271,11 @@ h1 {
   font-family: "AvenirNext Demi";
   justify-self: center;
   margin: 1rem 0;
+}
+@media screen and (min-width: 768px) {
+  .ticket-button {
+    padding: 0.5rem 1.5rem;
+  }
 }
 
 .footer {

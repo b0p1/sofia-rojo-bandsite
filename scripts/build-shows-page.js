@@ -35,6 +35,8 @@ let showSection = document.querySelector("main");
 
 let showList = document.querySelector(".shows-list");
 
+let showListHeader = document.querySelector(".show-list__header");
+
 for (let i = 0; i < shows.length; i++) {
   let showData = shows[i];
   let showCard = createShowCard(showData);
@@ -42,6 +44,21 @@ for (let i = 0; i < shows.length; i++) {
 }
 
 console.log(createShowCard);
+
+let tabletDateLabel = document.createElement("h3");
+tabletDateLabel.classList.add("show__label__tablet");
+tabletDateLabel.innerText = "DATE";
+showListHeader.appendChild(tabletDateLabel);
+
+let tabletVenueLabel = document.createElement("h3");
+tabletVenueLabel.classList.add("show__label__tablet");
+tabletVenueLabel.innerText = "VENUE";
+showListHeader.appendChild(tabletVenueLabel);
+
+let tabletLocationLabel = document.createElement("h3");
+tabletLocationLabel.classList.add("show__label__tablet");
+tabletLocationLabel.innerText = "LOCATION";
+showListHeader.appendChild(tabletLocationLabel);
 
 function createShowCard(showData) {
   let showCard = document.createElement("div");

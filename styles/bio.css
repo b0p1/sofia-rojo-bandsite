@@ -670,7 +670,7 @@ label {
 }
 @media screen and (min-width: 768px) {
   .footer__par-desc {
-    line-height: 1.25rem;
+    line-height: 1.375rem;
   }
 }
 .footer__par-email {

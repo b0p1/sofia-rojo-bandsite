@@ -98,20 +98,30 @@ a {
   &__subheader {
     margin: 1rem 1rem;
     font-size: 1rem;
+    @include tablet{
+     margin: 0;
+     padding: 1rem 0;
+     font-size: 1.5rem;
+    }
   }
   &__song-link {
     margin: 1rem;
     border-radius: .25rem;
+    @include tablet {
+      width: 55%;
+    }
   }
   @include tablet {
     height: 26rem;
-    padding: 0 0 0 2.25rem;
+    padding: 2rem 0 2rem 2.25rem;
+    align-items: inherit;
   }
   @include desktop {
     padding: 0 0 0 8rem;
     height: 40rem;
   }
 }
+
 
 h1 {
   margin: 0 1rem;
@@ -121,6 +131,7 @@ h1 {
     font-size: 3.75rem;
     font-weight: 700;
     margin: 0;
+    width: 75%;
   }
 }
 
@@ -166,7 +177,7 @@ h1 {
       background: $Alabaster;
       cursor: pointer;
       @include tablet {
-        padding: 1.5rem 1.125rem;
+        
       }
     }
     &:active {
@@ -180,6 +191,7 @@ h1 {
     margin-bottom: 0.5rem;
     @include tablet {
       justify-self: flex-start;
+      display: none;
     }
   }
   &__date {
@@ -217,6 +229,9 @@ h1 {
   font-family: $Ave-demi;
   justify-self: center;
   margin: 1rem 0;
+  @include tablet{
+    padding: .5rem 1.5rem;
+  }
 }
 
 .footer {
