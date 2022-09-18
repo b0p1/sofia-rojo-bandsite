@@ -125,6 +125,7 @@ a {
 }
 .hero__song-link {
   margin: 1rem;
+  border-radius: 0.25rem;
 }
 @media screen and (min-width: 768px) {
   .hero {
@@ -201,7 +202,6 @@ h1 {
 }
 .show__card:hover {
   background: #fafafa;
-  padding: 1rem;
   cursor: pointer;
 }
 @media screen and (min-width: 768px) {
@@ -215,7 +215,7 @@ h1 {
 .show__label {
   font-family: "AvenirNext Demi";
   font-size: 0.625rem;
-  color: lightgray;
+  color: #afafaf;
   margin-bottom: 0.5rem;
 }
 @media screen and (min-width: 768px) {

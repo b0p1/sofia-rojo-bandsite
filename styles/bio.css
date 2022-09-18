@@ -278,6 +278,7 @@ h1 {
 @media screen and (min-width: 768px) {
   .photo-gallery {
     padding: 0 2.25rem;
+    padding-bottom: 1rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -334,10 +335,21 @@ h1 {
   flex-direction: column;
   position: relative;
 }
+@media screen and (min-width: 768px) {
+  .comment-section {
+    padding: 2.25rem 2.25rem;
+  }
+}
 .comment-section__title {
   font-family: "AvenirNext Demi";
   margin-bottom: 0.5rem;
   margin-top: 0;
+}
+@media screen and (min-width: 768px) {
+  .comment-section__title {
+    font-size: 2.25rem;
+    margin-bottom: 1.5rem;
+  }
 }
 .comment-avatar {
   border-radius: 50%;
@@ -351,11 +363,24 @@ h1 {
   left: 1rem;
   top: 5.75rem;
 }
+@media screen and (min-width: 768px) {
+  .comment-avatar {
+    left: 5.5rem;
+    top: 8.6rem;
+    width: 3rem;
+    height: 3rem;
+  }
+}
 .comment-form {
   display: flex;
   flex-direction: column;
   margin-left: 2.25rem;
   padding: 0 0 0 1rem;
+}
+@media screen and (min-width: 768px) {
+  .comment-form {
+    margin-left: 6rem;
+  }
 }
 
 input::-moz-placeholder {
@@ -399,10 +424,15 @@ label {
   font-size: 0.625rem;
   margin-top: 1rem;
 }
+@media screen and (min-width: 768px) {
+  label {
+    font-size: 0.75rem;
+  }
+}
 
 #nameBox {
   font-family: "AvenirNext Normal";
-  font-size: 0.9rem;
+  font-size: 0 0.875rem;
   color: black;
   background-color: #fafafa;
   border: #e1e1e1 solid 1px;
@@ -410,28 +440,44 @@ label {
   padding: 0.7rem;
   margin: 0.5rem 0;
 }
+@media screen and (min-width: 768px) {
+  #nameBox {
+    padding: 1rem;
+  }
+}
 
 #commentBox {
   font-family: "AvenirNext Normal";
-  font-size: 0.9rem;
+  font-size: 0 0.875rem;
   color: black;
   background-color: #fafafa;
   border: #e1e1e1 solid 1px;
   border-radius: 0.25rem;
   padding: 0.7rem;
   margin: 0.5rem 0;
+}
+@media screen and (min-width: 768px) {
+  #commentBox {
+    padding: 1rem;
+  }
 }
 
 #submitButton {
   background-color: #323232;
   color: #ffffff;
-  font-family: "AvenirNext Demi";
-  font-size: 1rem;
+  font-family: "AvenirNext Normal";
+  font-size: 0.875rem;
   border: 1px solid #323232;
   border-radius: 0.25rem;
   padding: 0.6rem;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  #submitButton {
+    align-self: flex-end;
+    padding: 0.6rem 2rem;
+  }
 }
 
 .static-comments {
@@ -444,6 +490,12 @@ label {
   flex-direction: column;
   padding: 1rem 0;
 }
+@media screen and (min-width: 768px) {
+  .comment__card {
+    margin-left: 6rem;
+    padding: 1.75rem 0;
+  }
+}
 .comment__titles {
   display: flex;
   padding-left: 3rem;
@@ -451,6 +503,11 @@ label {
   position: relative;
   justify-content: space-between;
   height: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .comment__titles {
+    padding-left: 4rem;
+  }
 }
 .comment__avatar {
   height: 2.25rem;
@@ -461,19 +518,31 @@ label {
   left: 0rem;
   top: 0rem;
 }
+@media screen and (min-width: 768px) {
+  .comment__avatar {
+    height: 3rem;
+    width: 3rem;
+  }
+}
 .comment__name-label {
   font-family: "AvenirNext Demi";
-  font-size: 0.8rem;
+  font-size: 0.875rem;
 }
 .comment__date {
   font-family: "AvenirNext Normal";
   color: #afafaf;
-  font-size: 0.8rem;
+  font-size: 0.875rem;
 }
 .comment__content {
-  font-size: 0.813rem;
+  font-size: 0.845rem;
   padding-left: 3rem;
   margin-bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  .comment__content {
+    padding-left: 4rem;
+    line-height: 1.125rem;
+  }
 }
 
 .footer {
@@ -596,6 +665,8 @@ label {
 }
 .footer__par-desc {
   line-height: 1.125rem;
+  display: flex;
+  flex-direction: column;
 }
 @media screen and (min-width: 768px) {
   .footer__par-desc {
@@ -613,6 +684,7 @@ label {
 @media screen and (min-width: 768px) {
   .footer__par-copyright {
     font-size: 0.813rem;
+    padding-top: 2rem;
   }
 }
 .footer__logo {

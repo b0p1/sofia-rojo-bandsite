@@ -19,6 +19,7 @@ let commentsArray = [
     }
 ];
 
+
 let commentSection = document.querySelector(".comment-section");
 let commentList = document.querySelector(".static-comments");
 let commentForm = document.querySelector("#commentForm");
@@ -39,20 +40,25 @@ commentForm.addEventListener("submit", (e) => {
 
   commentsArray.unshift(dynamicComments);
   console.log(commentsArray);
+  console.log(commentsArray);
+  
+//   addComments();
 
   e.target.reset();
   
 });
 
 
+function addComments () {
+    for (let i = 0; i < commentsArray.length; i++) {
+        // commentList.innerHTML = "";
 
+        let commentData = commentsArray[i];
+        let commentCard = createCommentCard(commentData);
+        commentList.appendChild(commentCard);   
+}};
 
-for (let i = 0; i < commentsArray.length; i++) {
-    let commentData = commentsArray[i];
-    let commentForm = createCommentCard(commentData);
-    commentList.appendChild(commentForm);
-  }
-  
+addComments();
 
 function createCommentCard(commentData) {
   let commentCard = document.createElement("div");
@@ -87,7 +93,5 @@ function createCommentCard(commentData) {
   comment.innerText = commentData.comment;
   commentCard.appendChild(comment);
 
-  // form section
-  
   return commentCard;
 }

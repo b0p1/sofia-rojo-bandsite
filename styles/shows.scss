@@ -101,6 +101,7 @@ a {
   }
   &__song-link {
     margin: 1rem;
+    border-radius: .25rem;
   }
   @include tablet {
     height: 26rem;
@@ -163,7 +164,6 @@ h1 {
     }
     &:hover {
       background: $Alabaster;
-      padding: 1rem;
       cursor: pointer;
       @include tablet {
         padding: 1.5rem 1.125rem;
@@ -176,7 +176,7 @@ h1 {
   &__label {
     font-family: $Ave-demi;
     font-size: 0.625rem;
-    color: lightgray;
+    color:$Silver;
     margin-bottom: 0.5rem;
     @include tablet {
       justify-self: flex-start;
