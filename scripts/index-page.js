@@ -51,12 +51,12 @@ commentForm.addEventListener("submit", (e) => {
   commentsArray.unshift(formComments);
   console.log(commentsArray);
 
-  addComments();
+  displayComment();
 
   e.target.reset();
 });
 
-function addComments() {
+function displayComment() {
   commentList.innerHTML = "";
 
   for (let i = 0; i < commentsArray.length; i++) {
@@ -67,7 +67,7 @@ function addComments() {
   }
 }
 
-addComments();
+displayComment();
 
 function createCommentCard(commentData) {
   let commentCard = document.createElement("div");
