@@ -1,4 +1,4 @@
-let comments = [
+let commentsArray = [
     {
         avatar: '',
         name:'Connor Walton',
@@ -19,48 +19,75 @@ let comments = [
     }
 ];
 
-let commentSection = document.querySelector('.comment-section');
+let commentSection = document.querySelector(".comment-section");
+let commentList = document.querySelector(".static-comments");
+let commentForm = document.querySelector("#commentForm");
 
-let commentList = document.querySelector('.static-comments')
+commentForm.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-for (let i = 0; i < comments.length; i++) {
-    let commentData = comments[i];
+  let name = e.target.fullName.value;
+  let date = "date";
+  let comment = e.target.comment.value;
+
+  let dynamicComments = { 
+     avatar: "",
+     name: name,
+     date: date, 
+     comment: comment, 
+    };
+
+  commentsArray.unshift(dynamicComments);
+  console.log(commentsArray);
+
+  e.target.reset();
+  
+});
+
+
+
+
+for (let i = 0; i < commentsArray.length; i++) {
+    let commentData = commentsArray[i];
     let commentForm = createCommentCard(commentData);
     commentList.appendChild(commentForm);
   }
+  
 
 function createCommentCard(commentData) {
-    let commentCard = document.createElement("div");
-    commentCard.classList.add("comment__card");
-    commentList.appendChild(commentCard);
-    
-    let commentTitles = document.createElement('div')
-    commentTitles.classList.add('comment__titles')
-    commentCard.appendChild(commentTitles)
+  let commentCard = document.createElement("div");
+  commentCard.classList.add("comment__card");
+  commentList.appendChild(commentCard);
 
-    // icon section
-    let avatar = document.createElement('span');
-    avatar.classList.add('comment__avatar');
-    avatar.innerText = commentData.avatar;
-    commentTitles.appendChild(avatar);
+  let commentTitles = document.createElement("div");
+  commentTitles.classList.add("comment__titles");
+  commentCard.appendChild(commentTitles);
 
-    // name section
-    let nameLabel = document.createElement('h3');
-    nameLabel.classList.add('comment__name-label');
-    nameLabel.innerText = commentData.name;
-    commentTitles.appendChild(nameLabel);
+  // icon section
+  let avatar = document.createElement("span");
+  avatar.classList.add("comment__avatar");
+  avatar.innerText = commentData.avatar;
+  commentTitles.appendChild(avatar);
 
-    // date section 
-    let date = document.createElement('h4');
-    date.classList.add('comment__date');
-    date.innerText = commentData.date;
-    commentTitles.appendChild(date);
+  // name section
+  let nameLabel = document.createElement("h3");
+  nameLabel.classList.add("comment__name-label");
+  nameLabel.innerText = commentData.name;
+  commentTitles.appendChild(nameLabel);
 
-    // comment section
-    let comment = document.createElement('p');
-    comment.classList.add ('comment__content');
-    comment.innerText = commentData.comment;
-    commentCard.appendChild(comment);
+  // date section
+  let date = document.createElement("h4");
+  date.classList.add("comment__date");
+  date.innerText = commentData.date;
+  commentTitles.appendChild(date);
 
-    return commentCard
+  // comment section
+  let comment = document.createElement("p");
+  comment.classList.add("comment__content");
+  comment.innerText = commentData.comment;
+  commentCard.appendChild(comment);
+
+  // form section
+  
+  return commentCard;
 }

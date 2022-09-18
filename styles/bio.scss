@@ -289,15 +289,27 @@ h1 {
     display: flex;
     flex-direction: column;
     margin-left: 2.25rem;
-    padding: 0 1rem;
+    padding: 0 0 0 1rem ;
   }
 }
 
-input::placeholder{
+input{
+  &::placeholder{
     color: $BandSite_DarkBlack;
   }
-textarea::placeholder{
+  &:focus{
+    outline: 1px solid $BandSite_DarkBlack;
+  }
+}
+
+
+textarea{
+  &::placeholder{
   color: $BandSite_DarkBlack;
+  }
+  &:focus{
+    outline: 1px solid $BandSite_DarkBlack;
+  }
 }
 textarea{
   resize: none;
@@ -339,7 +351,7 @@ label{
   font-size: 1rem;
   border: 1px solid $BandSite_Black;
   border-radius: .25rem;
-  padding: 1rem;
+  padding: .6rem;
   margin-top: .5rem;
   margin-bottom: 1rem;
 }
