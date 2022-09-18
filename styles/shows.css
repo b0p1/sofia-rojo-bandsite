@@ -119,6 +119,12 @@ a {
   justify-content: center;
   padding: 1.5rem 0;
 }
+@media screen and (min-width: 1280px) {
+  .hero {
+    flex-direction: row;
+    align-items: center;
+  }
+}
 .hero__subheader {
   margin: 1rem 1rem;
   font-size: 1rem;
@@ -139,16 +145,22 @@ a {
     width: 55%;
   }
 }
+@media screen and (min-width: 1280px) {
+  .hero__song-link {
+    width: 55%;
+    margin: 0;
+    height: 13.031rem;
+  }
+}
 @media screen and (min-width: 768px) {
   .hero {
     height: 26rem;
     padding: 2rem 0 2rem 2.25rem;
-    align-items: inherit;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero {
-    padding: 0 0 0 8rem;
+    padding: 0 8rem 0 8rem;
     height: 40rem;
   }
 }
