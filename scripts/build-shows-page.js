@@ -33,7 +33,7 @@ let shows = [
 
 let showSection = document.querySelector("main");
 
-let showList = document.querySelector(".shows-list");
+let showList = document.querySelector(".show-list");
 
 let showListHeader = document.querySelector(".show-list__header");
 

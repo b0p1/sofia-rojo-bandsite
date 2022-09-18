@@ -144,6 +144,7 @@ h1 {
   }
   @include desktop {
     padding: 0 8rem;
+   margin: 0;
   }
   &__title {
     font-family: $Ave-demi;
@@ -156,6 +157,8 @@ h1 {
     }
     @include desktop {
       margin: 2.75rem 0;
+      width: fit-content;
+      position: relative;
     }
   }
 }
@@ -168,7 +171,22 @@ h1 {
       flex-direction: row;
       justify-content: space-between;
     }
+    @include desktop {
+      width: 75%;
+      align-self: self-end;
+      position: relative;
+      top: -4.75rem;
+    }
   }
+  &-list{
+    @include desktop {
+      width: 75%;
+      align-self: self-end;
+      position: relative;
+      top: -4rem;
+    }
+  }
+  
   &__card {
     display: flex;
     flex-direction: column;
@@ -239,6 +257,9 @@ h1 {
 .tablet__header {
   &-date {
     width: 7.625rem;
+    @include desktop{
+      
+    }
   }
   &-venue {
     width: 6.313rem;
