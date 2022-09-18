@@ -30,31 +30,39 @@ commentForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
   let name = e.target.fullName.value;
-  let date = "date";
+  let date = new Date();
+
+  let timeStampDate = String(date.getDate()).padStart(2, "0");
+  let timeStampMonth = String(date.getMonth() + 1).padStart(2, "0");
+  let timeStampYear = date.getFullYear();
+  let timeStampArray =
+    timeStampMonth + "/" + timeStampDate + "/" + timeStampYear;
+  console.log(timeStampArray);
+
   let comment = e.target.comment.value;
 
-  let dynamicComments = {
+  let formComments = {
     avatar: "",
     name: name,
-    date: date,
+    date: timeStampArray,
     comment: comment,
   };
 
-  commentsArray.unshift(dynamicComments);
-  console.log(commentsArray);
+  commentsArray.unshift(formComments);
   console.log(commentsArray);
 
-  //   addComments();
+  addComments();
 
   e.target.reset();
 });
 
 function addComments() {
-  for (let i = 0; i < commentsArray.length; i++) {
-    // commentList.innerHTML = "";
+  commentList.innerHTML = "";
 
+  for (let i = 0; i < commentsArray.length; i++) {
     let commentData = commentsArray[i];
     let commentCard = createCommentCard(commentData);
+    console.log(commentCard);
     commentList.appendChild(commentCard);
   }
 }
