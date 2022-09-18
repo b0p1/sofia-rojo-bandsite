@@ -45,21 +45,31 @@ for (let i = 0; i < shows.length; i++) {
 
 console.log(createShowCard);
 
+// Card Header for tablet and desktop
 let tabletDateLabel = document.createElement("h3");
-tabletDateLabel.classList.add("show__label__tablet");
+tabletDateLabel.classList.add("show__label__tablet", "tablet__header-date");
 tabletDateLabel.innerText = "DATE";
 showListHeader.appendChild(tabletDateLabel);
 
 let tabletVenueLabel = document.createElement("h3");
-tabletVenueLabel.classList.add("show__label__tablet");
+tabletVenueLabel.classList.add("show__label__tablet", "tablet__header-venue");
 tabletVenueLabel.innerText = "VENUE";
 showListHeader.appendChild(tabletVenueLabel);
 
 let tabletLocationLabel = document.createElement("h3");
-tabletLocationLabel.classList.add("show__label__tablet");
+tabletLocationLabel.classList.add(
+  "show__label__tablet",
+  "tablet__header-location"
+);
 tabletLocationLabel.innerText = "LOCATION";
 showListHeader.appendChild(tabletLocationLabel);
 
+let tabletSpaceLabel = document.createElement("h3");
+tabletSpaceLabel.classList.add("show__label__tablet", "tablet__header-space");
+tabletSpaceLabel.innerText = "";
+showListHeader.appendChild(tabletSpaceLabel);
+
+// function to add shows to show card
 function createShowCard(showData) {
   let showCard = document.createElement("div");
   showCard.classList.add("show__card");

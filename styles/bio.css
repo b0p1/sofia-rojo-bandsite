@@ -432,7 +432,7 @@ label {
 
 #nameBox {
   font-family: "AvenirNext Normal";
-  font-size: 0 0.875rem;
+  font-size: 0.875rem;
   color: black;
   background-color: #fafafa;
   border: #e1e1e1 solid 1px;
@@ -448,7 +448,7 @@ label {
 
 #commentBox {
   font-family: "AvenirNext Normal";
-  font-size: 0 0.875rem;
+  font-size: 0.875rem;
   color: black;
   background-color: #fafafa;
   border: #e1e1e1 solid 1px;

@@ -98,15 +98,15 @@ a {
   &__subheader {
     margin: 1rem 1rem;
     font-size: 1rem;
-    @include tablet{
-     margin: 0;
-     padding: 1rem 0;
-     font-size: 1.5rem;
+    @include tablet {
+      margin: 0;
+      padding: 1rem 0;
+      font-size: 1.5rem;
     }
   }
   &__song-link {
     margin: 1rem;
-    border-radius: .25rem;
+    border-radius: 0.25rem;
     @include tablet {
       width: 55%;
     }
@@ -121,7 +121,6 @@ a {
     height: 40rem;
   }
 }
-
 
 h1 {
   margin: 0 1rem;
@@ -162,6 +161,14 @@ h1 {
 }
 
 .show {
+  &-list__header {
+    display: none;
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
   &__card {
     display: flex;
     flex-direction: column;
@@ -177,7 +184,6 @@ h1 {
       background: $Alabaster;
       cursor: pointer;
       @include tablet {
-        
       }
     }
     &:active {
@@ -187,11 +193,16 @@ h1 {
   &__label {
     font-family: $Ave-demi;
     font-size: 0.625rem;
-    color:$Silver;
+    color: $Silver;
     margin-bottom: 0.5rem;
     @include tablet {
       justify-self: flex-start;
       display: none;
+    }
+    &__tablet {
+      font-size: 0.75rem;
+      color: $Silver;
+      font-family: $Ave-demi;
     }
   }
   &__date {
@@ -200,7 +211,8 @@ h1 {
     margin-bottom: 1rem;
     font-size: 0.75rem;
     @include tablet {
-      width: 6.5rem;
+      width: 7.625rem;
+      font-size: 0.875rem;
     }
   }
   &__venue {
@@ -209,7 +221,8 @@ h1 {
     margin-bottom: 1rem;
     font-size: 0.75rem;
     @include tablet {
-      width: 5.375rem;
+      width: 6.313rem;
+      font-size: 0.875rem;
     }
   }
   &__location {
@@ -217,6 +230,24 @@ h1 {
     margin: 0;
     margin-bottom: 1rem;
     font-size: 0.75rem;
+    @include tablet {
+      font-size: 0.875rem;
+    }
+  }
+}
+
+.tablet__header {
+  &-date {
+    width: 7.625rem;
+  }
+  &-venue {
+    width: 6.313rem;
+  }
+  &-location {
+    width: 7.082rem;
+  }
+  &-space {
+    width: 8.392rem;
   }
 }
 
@@ -229,8 +260,8 @@ h1 {
   font-family: $Ave-demi;
   justify-self: center;
   margin: 1rem 0;
-  @include tablet{
-    padding: .5rem 1.5rem;
+  @include tablet {
+    padding: 0.5rem 1.5rem;
   }
 }
 

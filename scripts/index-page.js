@@ -1,24 +1,26 @@
 let commentsArray = [
-    {
-        avatar: '',
-        name:'Connor Walton',
-        date:'02/17/2021',
-        comment:'This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.',
-    },
-    {
-        avatar: '',
-        name:'Emilie Beach',
-        date:'01/09/2021',
-        comment:'I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.',
-    },
-    {
-        avatar: '',
-        name:'Miles Acosta',
-        date:'12/20/2020',
-        comment:"I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-    }
+  {
+    avatar: "",
+    name: "Connor Walton",
+    date: "02/17/2021",
+    comment:
+      "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
+  },
+  {
+    avatar: "",
+    name: "Emilie Beach",
+    date: "01/09/2021",
+    comment:
+      "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
+  },
+  {
+    avatar: "",
+    name: "Miles Acosta",
+    date: "12/20/2020",
+    comment:
+      "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
+  },
 ];
-
 
 let commentSection = document.querySelector(".comment-section");
 let commentList = document.querySelector(".static-comments");
@@ -31,32 +33,31 @@ commentForm.addEventListener("submit", (e) => {
   let date = "date";
   let comment = e.target.comment.value;
 
-  let dynamicComments = { 
-     avatar: "",
-     name: name,
-     date: date, 
-     comment: comment, 
-    };
+  let dynamicComments = {
+    avatar: "",
+    name: name,
+    date: date,
+    comment: comment,
+  };
 
   commentsArray.unshift(dynamicComments);
   console.log(commentsArray);
   console.log(commentsArray);
-  
-//   addComments();
+
+  //   addComments();
 
   e.target.reset();
-  
 });
 
+function addComments() {
+  for (let i = 0; i < commentsArray.length; i++) {
+    // commentList.innerHTML = "";
 
-function addComments () {
-    for (let i = 0; i < commentsArray.length; i++) {
-        // commentList.innerHTML = "";
-
-        let commentData = commentsArray[i];
-        let commentCard = createCommentCard(commentData);
-        commentList.appendChild(commentCard);   
-}};
+    let commentData = commentsArray[i];
+    let commentCard = createCommentCard(commentData);
+    commentList.appendChild(commentCard);
+  }
+}
 
 addComments();
 

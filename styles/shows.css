@@ -201,6 +201,16 @@ h1 {
   }
 }
 
+.show-list__header {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .show-list__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 .show__card {
   display: flex;
   flex-direction: column;
@@ -233,6 +243,11 @@ h1 {
     display: none;
   }
 }
+.show__label__tablet {
+  font-size: 0.75rem;
+  color: #afafaf;
+  font-family: "AvenirNext Demi";
+}
 .show__date {
   font-family: "AvenirNext Demi";
   margin: 0;
@@ -241,7 +256,8 @@ h1 {
 }
 @media screen and (min-width: 768px) {
   .show__date {
-    width: 6.5rem;
+    width: 7.625rem;
+    font-size: 0.875rem;
   }
 }
 .show__venue {
@@ -252,7 +268,8 @@ h1 {
 }
 @media screen and (min-width: 768px) {
   .show__venue {
-    width: 5.375rem;
+    width: 6.313rem;
+    font-size: 0.875rem;
   }
 }
 .show__location {
@@ -260,6 +277,24 @@ h1 {
   margin: 0;
   margin-bottom: 1rem;
   font-size: 0.75rem;
+}
+@media screen and (min-width: 768px) {
+  .show__location {
+    font-size: 0.875rem;
+  }
+}
+
+.tablet__header-date {
+  width: 7.625rem;
+}
+.tablet__header-venue {
+  width: 6.313rem;
+}
+.tablet__header-location {
+  width: 7.082rem;
+}
+.tablet__header-space {
+  width: 8.392rem;
 }
 
 .ticket-button {

@@ -262,22 +262,20 @@ h1 {
   }
 }
 
-
-
 .comment {
   &-section {
     padding: 1rem;
     display: flex;
     flex-direction: column;
     position: relative;
-    @include tablet{
+    @include tablet {
       padding: 2.25rem 2.25rem;
     }
-    &__title{
+    &__title {
       font-family: $Ave-demi;
-      margin-bottom: .5rem ;
+      margin-bottom: 0.5rem;
       margin-top: 0;
-      @include tablet{
+      @include tablet {
         font-size: 2.25rem;
         margin-bottom: 1.5rem;
       }
@@ -292,7 +290,7 @@ h1 {
     position: absolute;
     left: 1rem;
     top: 5.75rem;
-    @include tablet{
+    @include tablet {
       left: 5.5rem;
       top: 8.6rem;
       width: 3rem;
@@ -303,119 +301,118 @@ h1 {
     display: flex;
     flex-direction: column;
     margin-left: 2.25rem;
-    padding: 0 0 0 1rem ;
-    @include tablet{
+    padding: 0 0 0 1rem;
+    @include tablet {
       margin-left: 6rem;
     }
   }
 }
 
-input{
-  &::placeholder{
+input {
+  &::placeholder {
     color: $BandSite_DarkBlack;
   }
-  &:focus{
+  &:focus {
     outline: 1px solid $BandSite_DarkBlack;
   }
 }
 
-
-textarea{
-  &::placeholder{
-  color: $BandSite_DarkBlack;
+textarea {
+  &::placeholder {
+    color: $BandSite_DarkBlack;
   }
-  &:focus{
+  &:focus {
     outline: 1px solid $BandSite_DarkBlack;
   }
 }
-textarea{
+textarea {
   resize: none;
 }
-label{
+label {
   color: $Silver;
   font-family: $Ave-demi;
   font-weight: 600;
   font-size: 0.625rem;
   margin-top: 1rem;
-  @include tablet{
-    font-size: .75rem;
+  @include tablet {
+    font-size: 0.75rem;
   }
 }
 
-#nameBox{
+#nameBox {
   font-family: $Ave-reg;
-  font-size: .0.875rem;
+  font-size: 0.875rem;
   color: black;
   background-color: $Alabaster;
   border: $Mercury solid 1px;
-  border-radius: .25rem;
-  padding: .7rem;
-  margin: .5rem 0;
-  @include tablet{
+  border-radius: 0.25rem;
+  padding: 0.7rem;
+  margin: 0.5rem 0;
+  @include tablet {
     padding: 1rem;
   }
 }
 
-#commentBox{
+#commentBox {
   font-family: $Ave-reg;
-  font-size: .0.875rem;
+  font-size: 0.875rem;
   color: black;
   background-color: $Alabaster;
   border: $Mercury solid 1px;
-  border-radius: .25rem;
-  padding: .7rem;
-  margin: .5rem 0;
-  @include tablet{
+  border-radius: 0.25rem;
+  padding: 0.7rem;
+  margin: 0.5rem 0;
+  @include tablet {
     padding: 1rem;
   }
 }
 
-#submitButton{
+#submitButton {
   background-color: $BandSite_Black;
   color: $White;
   font-family: $Ave-reg;
-  font-size: .875rem;
+  font-size: 0.875rem;
   border: 1px solid $BandSite_Black;
-  border-radius: .25rem;
-  padding: .6rem;
-  margin-top: .5rem;
+  border-radius: 0.25rem;
+  padding: 0.6rem;
+  margin-top: 0.5rem;
   margin-bottom: 1rem;
-  @include tablet{
+  @include tablet {
     align-self: flex-end;
-    padding:.6rem 2rem;
+    padding: 0.6rem 2rem;
   }
 }
 
-.static-comments{
-  border-bottom: 1px solid $Mercury ;
+.static-comments {
+  border-bottom: 1px solid $Mercury;
 }
 
-.comment{
-  &__card{
-    border-top: 1px solid $Mercury ;
+.comment {
+  &__card {
+    border-top: 1px solid $Mercury;
     display: flex;
     flex-direction: column;
     // flex-wrap: wrap;
     // justify-content: space-between;
     // align-items: flex-start;
     padding: 1rem 0;
-    @include tablet{
+    @include tablet {
       margin-left: 6rem;
       padding: 1.75rem 0;
     }
   }
-  &__titles{
+  &__titles {
     display: flex;
     padding-left: 3rem;
     align-items: center;
     position: relative;
     justify-content: space-between;
     height: 1rem;
-    @include tablet{
+    @include tablet {
       padding-left: 4rem;
     }
   }
-  &__avatar{
+  &__avatar {
     height: 2.25rem;
     width: 2.25rem;
     background-color: $Mercury;
@@ -423,26 +420,25 @@ label{
     position: absolute;
     left: 0rem;
     top: 0rem;
-    @include tablet{
+    @include tablet {
       height: 3rem;
       width: 3rem;
     }
   }
-  &__name-label{
+  &__name-label {
     font-family: $Ave-demi;
-    font-size: .875rem;
-    
+    font-size: 0.875rem;
   }
-  &__date{
+  &__date {
     font-family: $Ave-reg;
     color: $Silver;
-    font-size: .875rem;
+    font-size: 0.875rem;
   }
-  &__content{
+  &__content {
     font-size: 0.845rem;
     padding-left: 3rem;
     margin-bottom: 0;
-    @include tablet{
+    @include tablet {
       padding-left: 4rem;
       line-height: 1.125rem;
     }
@@ -561,7 +557,7 @@ label{
       font-size: 0.625rem;
       @include tablet {
         font-size: 0.813rem;
-        padding-top: 2rem ;
+        padding-top: 2rem;
       }
     }
   }
