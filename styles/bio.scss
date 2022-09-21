@@ -137,8 +137,8 @@ h1 {
   }
   &__img {
     @include tablet {
-      height: 18rem;
-      width: 33rem;
+      height: 19rem;
+      width: auto;
       object-fit: cover;
       object-position: 100% 60%;
       padding: 0 4rem;

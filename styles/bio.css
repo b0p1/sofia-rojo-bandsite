@@ -175,8 +175,8 @@ h1 {
 }
 @media screen and (min-width: 768px) {
   .main__img {
-    height: 18rem;
-    width: 33rem;
+    height: 19rem;
+    width: auto;
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: 100% 60%;

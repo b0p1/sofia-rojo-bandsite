@@ -19,22 +19,21 @@ commentForm.addEventListener("submit", (e) => {
 
   let avatar = "";
   let name = e.target.fullName.value;
+  let comment = e.target.comment.value;
   let date = new Date();
   let formattedDate = formatDate(date);
 
   axios
     .post(usersURL, {
-      avatar: avatar,
       name: name,
-      date: date,
-      timestamp: formattedDate,
+      comment: comment,
     })
     .then((response) => {
       createCommentCard(response.data);
       commentForm.reset();
     });
 
-  // e.target.reset();
+  e.target.reset();
 });
 
 function formatDate(date) {
