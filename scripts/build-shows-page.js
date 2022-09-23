@@ -1,49 +1,35 @@
-let shows = [
-  {
-    date: "Mon Sept 06 2021",
-    venue: "Ronald Lane",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Tue Sept 21 2021",
-    venue: "Pier 3 East",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Fri Oct 15 2021",
-    venue: "View Lounge",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Sat Nov 06 2021",
-    venue: "Hyatt Agency",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Fri Nov 26 2021",
-    venue: "Moscow Center",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Wed Dec 15 2021",
-    venue: "Press Club",
-    location: "San Francisco, CA",
-  },
-];
+const showsURL =
+  "https://project-1-api.herokuapp.com/showdates?api_key=8613e1fd-39c9-441a-989c-bdabccc121ba";
 
 let showSection = document.querySelector("main");
-
 let showList = document.querySelector(".show-list");
-
 let showListHeader = document.querySelector(".show-list__header");
 
-for (let i = 0; i < shows.length; i++) {
-  let showData = shows[i];
-  let showCard = createShowCard(showData);
+// for (let i = 0; i < shows.length; i++) {
+//   let showData = shows[i];
+//   let showCard = createShowCard(showData);
+//   showList.appendChild(showCard);
+// }
+
+axios.get(showsURL).then((response) => {
+  response.data.forEach(displayShows);
+});
+
+function displayShows(element) {
+  let showCard = createShowCard(element);
   showList.appendChild(showCard);
 }
 
-console.log(createShowCard);
+function formatDate(date) {
+  let timeStampDate = String(date.getDate()).padStart(2, "0");
+  let timeStampMonth = String(date.getMonth() + 1).padStart(2, "0");
+  let timeStampYear = date.getFullYear();
+
+  let timeStampString =
+    timeStampMonth + "/" + timeStampDate + "/" + timeStampYear;
+
+  return timeStampString;
+}
 
 // Card Header for tablet and desktop
 let tabletDateLabel = document.createElement("h3");
@@ -83,7 +69,7 @@ function createShowCard(showData) {
 
   let date = document.createElement("p");
   date.classList.add("show__date");
-  date.innerText = showData.date;
+  date.innerText = formatDate(new Date(showData.date));
   showCard.appendChild(date);
 
   // venue section
@@ -94,7 +80,7 @@ function createShowCard(showData) {
 
   let venue = document.createElement("p");
   venue.classList.add("show__venue");
-  venue.innerText = showData.venue;
+  venue.innerText = showData.place;
   showCard.appendChild(venue);
 
   // location section

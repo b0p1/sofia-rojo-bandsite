@@ -9,6 +9,10 @@ axios.get(usersURL).then((response) => {
   response.data.forEach(displayComment);
 });
 
+function refreshComments() {
+  commentList.innerHTML = "";
+}
+
 function displayComment(element) {
   let commentCard = createCommentCard(element);
   commentList.appendChild(commentCard);
@@ -22,6 +26,11 @@ commentForm.addEventListener("submit", (e) => {
   let comment = e.target.comment.value;
   let date = new Date();
   let formattedDate = formatDate(date);
+  // formattedDate.sort(function(a, b){
+  //   let firstDate = date(a);
+  //   let lastDate = date(b);
+  //   return lastDate-firstDate;
+  // });
 
   axios
     .post(usersURL, {
@@ -32,7 +41,6 @@ commentForm.addEventListener("submit", (e) => {
       createCommentCard(response.data);
       commentForm.reset();
     });
-
   e.target.reset();
 });
 
@@ -41,10 +49,10 @@ function formatDate(date) {
   let timeStampMonth = String(date.getMonth() + 1).padStart(2, "0");
   let timeStampYear = date.getFullYear();
 
-  let timeStampArray =
+  let timeStampString =
     timeStampMonth + "/" + timeStampDate + "/" + timeStampYear;
 
-  return timeStampArray;
+  return timeStampString;
 }
 
 function createCommentCard(commentData) {
