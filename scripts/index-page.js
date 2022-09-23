@@ -5,12 +5,21 @@ let commentSection = document.querySelector(".comment-section");
 let commentList = document.querySelector(".static-comments");
 let commentForm = document.querySelector("#commentForm");
 
-axios.get(usersURL).then((response) => {
-  response.data.forEach(displayComment);
-});
+let commentArray = [];
+
+refreshComments();
 
 function refreshComments() {
-  commentList.innerHTML = "";
+  axios.get(usersURL).then((response) => {
+    response.data.forEach((comment) => {
+      commentArray.push(comment);
+    });
+    commentArray.sort((a, b) => b.timestamp - a.timestamp);
+    commentList.innerHTML = "";
+    commentArray.forEach((comment) => {
+      displayComment(comment);
+    });
+  });
 }
 
 function displayComment(element) {
@@ -26,19 +35,14 @@ commentForm.addEventListener("submit", (e) => {
   let comment = e.target.comment.value;
   let date = new Date();
   let formattedDate = formatDate(date);
-  // formattedDate.sort(function(a, b){
-  //   let firstDate = date(a);
-  //   let lastDate = date(b);
-  //   return lastDate-firstDate;
-  // });
 
   axios
     .post(usersURL, {
       name: name,
       comment: comment,
     })
-    .then((response) => {
-      createCommentCard(response.data);
+    .then(() => {
+      refreshComments();
       commentForm.reset();
     });
   e.target.reset();

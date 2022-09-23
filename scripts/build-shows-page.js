@@ -5,12 +5,6 @@ let showSection = document.querySelector("main");
 let showList = document.querySelector(".show-list");
 let showListHeader = document.querySelector(".show-list__header");
 
-// for (let i = 0; i < shows.length; i++) {
-//   let showData = shows[i];
-//   let showCard = createShowCard(showData);
-//   showList.appendChild(showCard);
-// }
-
 axios.get(showsURL).then((response) => {
   response.data.forEach(displayShows);
 });
