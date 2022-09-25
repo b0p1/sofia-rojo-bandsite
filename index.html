@@ -91,7 +91,7 @@
       <label for="nameBox">NAME</label>
       <input type="text" id="nameBox" name="fullName" placeholder="Enter your name" autocomplete="off" required>
       <label for="commentBox">COMMENT</label>
-      <textarea type="text" id="commentBox" name="comment" value="comment" autocomplete="off" placeholder="Add a new comment" cols="30"
+      <textarea id="commentBox" name="comment" autocomplete="off" placeholder="Add a new comment" cols="30"
         rows="5"  required></textarea>
       <Button type="submit" id="submitButton" name="button">COMMENT</Button>
     </form>
@@ -104,69 +104,76 @@
   <!-- Footer Begins -->
   <footer class="footer">
     <div class="footer__nav">
-      <h2 class="footer__title ">Get In Touch</h2>
+      <h2 class="footer__title ">Get in Touch</h2>
       <!-- socials section -->
       <div class="footer__socials">
-        <img class="footer__socials-icon" src="./assets/icons/SVG/Icon-instagram.svg" alt="instagram icon">
-        <img class="footer__socials-icon" src="./assets/icons/SVG/Icon-facebook.svg" alt="facebook icon">
-        <img class="footer__socials-icon" src="./assets/icons/SVG/Icon-twitter.svg" alt="twitter icon">
-        <img class="footer__socials-logo" src="./assets/logo/Logo-bandsite.svg" alt="BandSite Logo">
+        <img class="footer__socials-icon" src="../assets/icons/SVG/Icon-instagram.svg" alt="instagram icon">
+        <img class="footer__socials-icon" src="../assets/icons/SVG/Icon-facebook.svg" alt="facebook icon">
+        <img class="footer__socials-icon" src="../assets/icons/SVG/Icon-twitter.svg" alt="twitter icon">
       </div>
+      <img class="footer__socials-logo" src="../assets/logo/Logo-bandsite.svg" alt="BandSite Logo">
     </div>
     <div class="footer__par-container">
       <div class="footer__par-agent">
         <p class="footer__par footer__par-title">
-          Cam Adams <br />
-          The Bees Knees Management
+          Cam Adams
         </p>
+          <p class="footer__par footer__par-title footer__par-role">The Bees Knees Management</p>
+          
+        
         <p class="footer__par footer__par-desc">
           503 Broadway Penthouse,
-          <br />
-          New York, NY 10012, USA
-          <span class="footer__par footer__par-desc footer__par-email">
-            info@thebeesknees.com
-          </span>
         </p>
+          <p class="footer__par footer__par-desc">New York, NY 10012, USA
+          </p>
+          
+        <div class="footer__par footer__par-desc footer__par-email">
+          info@thebeesknees.com
+        </div>
       </div>
       <div class="footer__par-agent">
         <p class="footer__par footer__par-title">
           Pearl Gregg
-          <br />
-          Limitless Artist Group
         </p>
+        <p class="footer__par footer__par-title footer__par-role">Limitless Artist Group
+        </p>
+
         <p class="footer__par footer__par-desc">
           Booking Agent for
-          <br />
+          </p>
+          <p class="footer__par footer__par-desc">
           US / South America / Japan
-          <span class="footer__par footer__par-desc footer__par-email">
-            pearl.gregg@limitlessag.com
-          </span>
+          </p>
+        <div class="footer__par footer__par-desc footer__par-email">
+          pearl.gregg@limitlessag.com
+        </div>
 
-        </p>
       </div>
       <div class="footer__par-agent">
         <p class="footer__par footer__par-title">
-          Carson Whyte <br />
-          ARCH Entertainment
+          Carson Whyte
         </p>
+        <p class="footer__par footer__par-title footer__par-role">ARCH Entertainment</p>
+        
         <p class="footer__par footer__par-desc">
           Booking Agent for
-          <br />
-          UK / EU / AU
-          <span class="footer__par footer__par-desc footer__par-email">
-            cwhyte@archentertainment.com
-          </span>
-
         </p>
+          <p class="footer__par footer__par-desc">
+          UK / EU / AU
+          </p>
+        <div class="footer__par footer__par-desc footer__par-email">
+          cwhyte@archentertainment.com
+        </div>
       </div>
       <div class="footer__logo">
-        <img src="./assets/logo/Logo-bandsite.svg" alt="BandSite Logo">
+        <img src="../assets/logo/Logo-bandsite.svg" alt="BandSite Logo">
       </div>
     </div>
     <p class="footer__par footer__par-copyright">
       Copyright The Bees Knees © 2021 All Rights Reserved
     </p>
   </footer>
+
 
   <script src="./scripts/index-page.js"></script>
 </body>

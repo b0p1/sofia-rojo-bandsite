@@ -1,5 +1,5 @@
 const showsURL =
-  "https://project-1-api.herokuapp.com/showdates?api_key=8613e1fd-39c9-441a-989c-bdabccc121ba";
+  "https://project-1-api.herokuapp.com/showdates?api_key=a1f4245e-eeb2-46ab-819a-12f9f0b2ebfc";
 
 let showSection = document.querySelector("main");
 let showList = document.querySelector(".show-list");
