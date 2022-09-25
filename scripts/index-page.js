@@ -1,5 +1,5 @@
 const usersURL =
-  "https://project-1-api.herokuapp.com/comments?api_key=a1f4245e-eeb2-46ab-819a-12f9f0b2ebfc";
+  "https://project-1-api.herokuapp.com/comments?api_key=bc559201-cb31-4782-9217-1b936ebbe8bd";
 
 let commentSection = document.querySelector(".comment-section");
 let commentList = document.querySelector(".static-comments");
@@ -7,23 +7,27 @@ let commentForm = document.querySelector("#commentForm");
 
 let commentArray = [];
 
-
+refreshComments();
 
 function refreshComments() {
   axios.get(usersURL).then((response) => {
+    emptyArray();
     response.data.forEach((comment) => {
-      commentList.innerHTML = "";
       commentArray.push(comment);
     });
-    console.log(commentArray);
     commentArray.sort((a, b) => b.timestamp - a.timestamp);
+    commentList.innerHTML = "";
+
     commentArray.forEach((comment) => {
-    displayComment(comment);
-    
-  });
+      displayComment(comment);
+    });
   });
 }
+console.log(commentArray);
 
+function emptyArray() {
+  commentArray.length = 0;
+}
 
 function displayComment(element) {
   let commentCard = createCommentCard(element);
@@ -50,7 +54,6 @@ commentForm.addEventListener("submit", (e) => {
     });
   e.target.reset();
 });
-refreshComments();
 
 function formatDate(date) {
   let timeStampDate = String(date.getDate()).padStart(2, "0");
